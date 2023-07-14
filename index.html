@@ -33,5 +33,62 @@
     traits are responsibility and patience, determination and creativity, which in my point of view are
     the most important in IT.
   </p>
+
+  <h2>SKILLS</h2>
+  <ul>
+    <li>Programming languages:
+      <ul>
+        <li>C#</li>
+        <li>SQL</li>
+        <li>JavaScript</li>
+      </ul>
+    </li>
+    <li>Databases
+      <ul>
+        <li>MS Access</li>
+        <li>MS SQL Server</li>
+      </ul>
+    </li>
+    <li>Other
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+      </ul>
+    </li>
+  </ul>
+  
+  <h2>CODE EXAMPLE</h2>
+  <pre class="code-example">
+    <code>
+      namespace Fibonacci
+      {
+          class Program
+          {
+              static long[] numbers;
+      
+              static long Fib(int n)
+              {
+                  if (0 == numbers[n])
+                  {
+                      numbers[n] = Fib(n - 1) + Fib(n - 2);
+                  }
+                  return numbers[n];
+              }
+      
+              static void Main()
+              {
+                  Console.Write("n = ");
+                  int n = int.Parse(Console.ReadLine());
+                  numbers = new long[n + 2];
+                  numbers[1] = 1;
+                  numbers[2] = 1;
+                  long result = Fib(n);
+                  Console.WriteLine("fib({0}) = {1}", n, result);
+                  Console.ReadKey();
+              }
+          }
+      }
+    </code>
+  </pre>
 </body>  
 </html>
